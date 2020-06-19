@@ -1,12 +1,12 @@
 import React from 'react';
 
-const todos = ({todos,DeleteTodo})=>{
+const todos = ({todos,DeleteTodo,markdelete})=>{
     console.log("helloworld")
     const todoList = todos.length ? 
         (todos.map(todo=>{
             return(
                 <div className="collection-item " key={todo.id}>
-                <span onClick={()=>{DeleteTodo(todo.id)}}>{todo.content}</span>
+                <span onClick={()=>{DeleteTodo(todo.id)}} onHover={markdelete}>{todo.content}</span>
                 </div>
             )
     })) :
