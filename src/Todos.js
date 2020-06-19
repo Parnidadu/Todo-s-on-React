@@ -1,7 +1,7 @@
 import React from 'react';
 
 const todos = ({todos,DeleteTodo,markdelete})=>{
-    console.log("helloworld")
+    // console.log("helloworld")
     const todoList = todos.length ? 
         (todos.map(todo=>{
             return(
