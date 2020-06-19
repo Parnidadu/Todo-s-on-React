@@ -19,7 +19,7 @@ class App extends Component {
   }
   addTodo=(todo)=>{
     todo.id = Math.random()
-    const todos = [...this.state.todos,todo]
+    let todos = [...this.state.todos,todo]
     this.setState({
       todos
     })

@@ -12,6 +12,9 @@ class AddTodo extends Component{
     handleSubmit=(e)=>{
         e.preventDefault()
         this.props.addTodo(this.state)
+        this.setState({
+            content: ''
+          });
     }
     
     render(){
@@ -20,7 +23,7 @@ class AddTodo extends Component{
             <form class="col s12" onSubmit ={this.handleSubmit}>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="email" type="text" class="materialize-textarea" onChange={this.handleChange} placeholder="Add to do"/>
+                    <input id="email" type="text" class="materialize-textarea" onChange={this.handleChange} placeholder="Add to do" value={this.state.content}/>
                     <label for="email"></label>
                     <span class="helper-text" data-error="wrong" data-success="right">e.g, Jump from sky. etc</span>
                 </div>
